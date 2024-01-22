@@ -4,18 +4,39 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
     'plugin:react-hooks/recommended',
+    'plugin:prettier/recommended',
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
+  overrides: [
+    {
+      env: {
+        node: true,
+      },
+      files: ['.eslintrc.{js,cjs}'],
+      parserOptions: {
+        sourceType: 'script',
+      },
+    },
+  ],
   parser: '@typescript-eslint/parser',
-  plugins: ['react-refresh'],
+  plugins: ['@typescript-eslint', 'react', 'react-refresh'],
   rules: {
+    'no-var': 'error',
+    'prefer-const': 'error',
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
     ],
   },
-}
+};
 
 // # React + TypeScript + Vite
 

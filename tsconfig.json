@@ -16,9 +16,18 @@
 
     /* Linting */
     "strict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "exactOptionalPropertyTypes": true,
+    "noImplicitReturns": true,
+    "useUnknownInCatchVariables": true,
+    "alwaysStrict": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
