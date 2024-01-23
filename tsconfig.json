@@ -29,6 +29,6 @@
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
   },
-  "include": ["src"],
+  "include": ["src", "settings.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
