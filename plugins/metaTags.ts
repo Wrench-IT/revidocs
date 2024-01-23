@@ -1,13 +1,13 @@
-import { tags } from './../settings';
+import { indexHtml } from './../settings';
 
 const metaTags: string = `
-    <meta name="description" content="${tags.description}" />
-    <meta name="author" content="${tags.author}" />
-    <meta property="og:title" content="${tags.ogTitle}">
-    <meta property="og:description" content="${tags.ogDescription}">
-    <meta property="og:image" content="${tags.ogImage}">
-    <meta property="og:url" content="${tags.ogUrl}">
-    <meta name="twitter:title" content="${tags.twitterTitle}">
-    <link rel="canonical" href="${tags.canonicalUrl}"/>`;
+    <meta name="description" content="${indexHtml.description}" />
+    <meta name="author" content="${indexHtml.author}" />
+    <meta property="og:title" content="${indexHtml.ogTitle}">
+    <meta property="og:description" content="${indexHtml.ogDescription}">
+    <meta property="og:image" content="${indexHtml.ogImage}">
+    <meta property="og:url" content="${indexHtml.ogUrl}">
+    <meta name="twitter:title" content="${indexHtml.twitterTitle}">
+    <link rel="canonical" href="${indexHtml.canonicalUrl}"/>`;
 
 export default metaTags;

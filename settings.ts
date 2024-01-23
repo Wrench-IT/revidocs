@@ -1,10 +1,16 @@
-export const baseUrl = 'https://wrench-it.github.io/revidocs/';
+export const ghAccount = {
+  username: 'wrench-it',
+  repoName: 'revidocs',
+  author: 'Firstname Lastname',
+};
 
-export const tags = {
+export const baseUrl = `https://${ghAccount.username}.github.io/${ghAccount.repoName}/`;
+
+export const indexHtml = {
   lang: 'en',
   title: 'My custom title',
   description: 'My custom description',
-  author: 'Firstname Lastname',
+  author: ghAccount.author,
   ogTitle: 'My custom Open Graph title',
   ogDescription: 'My custom Open Graph description',
   ogImage: 'https://example.com/image',
