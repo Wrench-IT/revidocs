@@ -1,8 +1,10 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { baseUrl } from './settings';
+import htmlTransformer from './plugins/htmlTransformer';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "https://wrench-it.github.io/revidocs/",
-  plugins: [react()],
-})
+  base: baseUrl,
+  plugins: [react(), htmlTransformer()],
+});
