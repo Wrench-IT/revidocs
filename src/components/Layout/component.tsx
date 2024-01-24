@@ -3,6 +3,7 @@ import React from 'react';
 import { Flex, Layout, Menu, theme } from 'antd';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { ghAccount } from '../../../settings';
+import routes from '../../routes';
 
 const { Header, Content, Footer } = Layout;
 
@@ -13,6 +14,17 @@ const LayoutComponent: React.FC = () => {
 
   const location = useLocation();
 
+  const items = [];
+
+  for (const item of routes) {
+    items.push({
+      key: `/${ghAccount.repoName}/` + item.link,
+      label: (
+        <Link to={`/${ghAccount.repoName}/` + item.link}>{item.label}</Link>
+      ),
+    });
+  }
+
   return (
     <Layout>
       <Flex className="wrapper" vertical>
@@ -22,22 +34,7 @@ const LayoutComponent: React.FC = () => {
             theme="dark"
             mode="horizontal"
             selectedKeys={[location.pathname]}
-            items={[
-              {
-                key: `/${ghAccount.repoName}/`,
-                label: <Link to={`/${ghAccount.repoName}/`}>Docs</Link>,
-              },
-              {
-                key: `/${ghAccount.repoName}/about`,
-                label: <Link to={`/${ghAccount.repoName}/about`}>About</Link>,
-              },
-              {
-                key: `/${ghAccount.repoName}/contacts`,
-                label: (
-                  <Link to={`/${ghAccount.repoName}/contacts`}>Contacts</Link>
-                ),
-              },
-            ]}
+            items={items}
           />
         </Header>
         <Content style={{ padding: '0 48px' }}>
