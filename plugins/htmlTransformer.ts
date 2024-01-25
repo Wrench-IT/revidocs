@@ -1,4 +1,4 @@
-import { indexHtml, baseUrl } from '../settings';
+import { indexHtml, baseUrl } from '../settings/basic';
 import metaTags from './metaTags';
 
 const htmlTransformer = () => {

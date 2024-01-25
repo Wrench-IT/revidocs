@@ -2,7 +2,7 @@ import './styles.scss';
 import React from 'react';
 import { Flex, Layout, Menu, theme } from 'antd';
 import { Link, Outlet, useLocation } from 'react-router-dom';
-import { ghAccount } from '../../../settings';
+import { ghAccount } from '../../../settings/basic';
 import routes from '../../routes';
 
 const { Header, Content, Footer } = Layout;

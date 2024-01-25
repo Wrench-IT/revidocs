@@ -1,4 +1,4 @@
-import { indexHtml } from './../settings';
+import { indexHtml } from '../settings/basic';
 
 const metaTags: string = `
     <meta name="description" content="${indexHtml.description}" />
