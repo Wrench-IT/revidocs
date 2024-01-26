@@ -4,6 +4,16 @@ const home = `# Header 1
 #### Header 4
 ##### Header 5
 
+This is line
+
+---
+
+This is line too
+***
+
+And this is line too
+___
+
 This is text
 
 **This is bold text**

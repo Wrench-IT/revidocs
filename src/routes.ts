@@ -5,7 +5,7 @@ import contactUs from './content/contactUs';
 const routes = [
   {
     "link": "",
-    "label": "Docs",
+    "label": "Home",
     "content": home
   },
   {

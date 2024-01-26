@@ -5,10 +5,15 @@ import typography from './typography.js';
 const linkToContentConverter = (link) =>
   link.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase());
 
+const labelToContentConverter = (label) =>
+  label.toLowerCase().replace(/ ([a-z])/g, (_, letter) => letter.toUpperCase());
+
 const routesGenerator = (routes) => {
   routes.map((route) => {
     route.content =
-      route.link !== '' ? linkToContentConverter(route.link) : 'home';
+      route.link !== ''
+        ? linkToContentConverter(route.link)
+        : labelToContentConverter(route.label);
   });
 };
 
